@@ -13,7 +13,7 @@ pipeline {
     stage('Building image') {
       steps{
         script{
-      sh "docker pull ubuntu/nginx"
+      sh "sudo docker pull ubuntu/nginx"
         }
 
           }
