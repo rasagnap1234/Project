@@ -1,9 +1,6 @@
 pipeline {
   environment {
-    imagename = "yenigul/hacicenkins"
-    registryCredential = 'yenigul-dockerhub'
-    dockerImage = ''
-  }
+      }
   agent any
   stages {
     stage('Cloning Git') {
@@ -15,9 +12,9 @@ pipeline {
     }
     stage('Building image') {
       steps{
-     
-      sh "echo AWSKEY && sleep 10"
-
+        script{
+      sh "docker pull ubuntu/nginx"
+        }
 
           }
       }
